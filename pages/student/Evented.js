@@ -131,6 +131,20 @@ export default function Event() {
                 responsive: [ 'xs', 'sm', 'xl']
             },
             {
+              title: 'รหัสกิจกรรม',
+              dataIndex: 'code',
+              key: 'code',
+              ...getColumnSearchProps('code'),
+              responsive: [ 'xs','sm', 'xl' ]
+          },
+          {
+              title: 'ชื่อกิจกรรม',
+              dataIndex: 'name',
+              key: 'name',
+              ...getColumnSearchProps('name'),
+              responsive: [ 'xs', 'sm', 'xl' ]
+          },
+            {
                 title: 'ปีการศึกษา',
                 dataIndex: 'year',
                 key: 'year',
@@ -141,22 +155,9 @@ export default function Event() {
                 title: 'ภาคเรียน',
                 dataIndex: 'term',
                 key: 'term',
+                width: '10%',
                 ...getColumnSearchProps('term'),
                 responsive: [ 'md']
-            },
-            {
-                title: 'รหัสกิจกรรม',
-                dataIndex: 'code',
-                key: 'code',
-                ...getColumnSearchProps('code'),
-                responsive: [ 'xs','sm', 'xl' ]
-            },
-            {
-                title: 'ชื่อกิจกรรม',
-                dataIndex: 'name',
-                key: 'name',
-                ...getColumnSearchProps('name'),
-                responsive: [ 'xs', 'sm', 'xl' ]
             },
             {
                 title: 'หน่วนงาน',
@@ -177,7 +178,7 @@ export default function Event() {
                 dataIndex: 'hour',
                 key: 'hour',
                 ...getColumnSearchProps('hour'),
-                responsive: [ 'md']
+                responsive: [ 'md' ]
             },
             {
                 title: 'วันที่เข้าร่วม',
@@ -202,9 +203,9 @@ export default function Event() {
             no: '1',
             year: 2566,
             term: 2,
-            code: '66SC254805',
+            code: '66CS254800',
             name: 'อบรมสื่อการสอน',
-            gency: 'วิทยาการคอวพิวเตอร์',
+            gency: 'วิทยาการคอมพิวเตอร์',
             level: 'สาขา',
             hour: '12 ชั่วโมง',
             date: '14 มี.ค. 2566',
@@ -215,14 +216,40 @@ export default function Event() {
             no: '2',
             year: 2566,
             term: 2,
-            code: '66SC254805',
+            code: '66CS254801',
             name: 'อบรมสื่อการสอน',
-            gency: 'วิทยาการคอวพิวเตอร์',
+            gency: 'วิทยาการคอมพิวเตอร์',
             level: 'สาขา',
             hour: '12 ชั่วโมง',
             date: '14 มี.ค. 2566',
 
         },
+        {
+          key:'3',
+          no: '3',
+          year: 2566,
+          term: 2,
+          code: '66CS254802',
+          name: 'อบรมสื่อการสอน',
+          gency: 'วิทยาศาสต์และเทคโนโลยี',
+          level: 'คณะ',
+          hour: '12 ชั่วโมง',
+          date: '15 มี.ค. 2566',
+
+      },
+      {
+        key:'4',
+        no: '4',
+        year: 2566,
+        term: 2,
+        code: '66CS254803',
+        name: 'อบรมสื่อการสอน',
+        gency: 'วิทยาศาสต์และเทคโนโลยี',
+        level: 'คณะ',
+        hour: '12 ชั่วโมง',
+        date: '15 มี.ค. 2566',
+
+    },
 
     ];
     const showModal = () => {
@@ -261,7 +288,7 @@ export default function Event() {
     return (
         <>
             <header className="bg-white shadow mt-5">
-        <NavS className='my-10' />
+            <NavS className='my-10' />
                 <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900">กิจกรรมที่เข้าร่วม</h1>
 
@@ -270,7 +297,11 @@ export default function Event() {
             </header>
 
             <main>
-                <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 mt-5">
+                <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 mt-5 grid justify-items-end">
+                    <p>จำนวนกิจกรรมที่เข้าร่วม : 4</p>
+                    <p>จำนวนชั่วโมง : 48 ชั่วโมง</p>
+                </div>
+                <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
                     <App />
                 </div>
             </main>

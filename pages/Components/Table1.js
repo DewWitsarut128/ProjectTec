@@ -10,6 +10,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6403',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60043',
 
   },
   {
@@ -18,6 +19,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6405',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60043',
   },
   {
     key: '3',
@@ -25,6 +27,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6405',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60043',
   },
   {
     key: '4',
@@ -32,6 +35,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6405',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60043',
 
   },
   {
@@ -40,6 +44,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6405',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60043',
 
   },
   {
@@ -48,6 +53,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6405',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60043',
 
   },
   {
@@ -56,6 +62,7 @@ const data = [
     name: 'นายคมกฤษฎิ์ ก้อมมณี',
     group: 'ว.6405',
     address: 'วิทยาการคอมพิวเตอร์',
+    tokenkey: 'sb60045',
 
   },
 
@@ -198,8 +205,13 @@ const Table1 = () => {
       key: 'address',
       width: '20%',
       ...getColumnSearchProps('address'),
-      sorter: (a, b) => a.address.length - b.address.length,
-      sortDirections: ['descend', 'ascend'],
+    },
+    {
+      title: 'Token Key',
+      dataIndex: 'tokenkey',
+      key: 'tokenkey',
+      width: '20%',
+      ...getColumnSearchProps('tokenkey'),
     },
     {
       title: 'ดูข้อมูล',

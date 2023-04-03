@@ -17,6 +17,9 @@ export default function EventTable() {
     const [selectedTokenIndex, setSelectedTokenIndex] = useState(0);
     const [selecteddetailIndex, setSelectedDetailIndex] = useState(0);
     const indexValue = Data.map((index) => index.twotime);
+
+    
+
     const Detail =[
         {
             key: '1',
@@ -114,6 +117,7 @@ export default function EventTable() {
     const eventCancel = () => {
         setIsEventOpen(false);
     };
+    
 
     return (
         <div>
